@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* or your preferred font */
+    line-height: 1.6;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #ffb22d;
+    padding: 20px;
+    border-bottom: 5px solid #333;
+}
+
+section {
+    padding: 24px;  
+    border-bottom: 20px solid #ffb22d;
+    border-color: #ffb22d;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    margin: 16px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Centers the buttons */
+}
+
+nav ul li {
+    display: inline-block; /* Allows them to sit side-by-side */
+    margin: 0 15px; /* Adds space between the buttons */
+}
+
+a {
+    color: white;
+    background-color: forestgreen;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
