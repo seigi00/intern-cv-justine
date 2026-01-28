@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script language="javascript" type="text/javascript">
+        alert("Welcome to my CV!")
+    </script>
     <title>Document</title>
 </head>
 <body>
+    <button id="theme-switch">🌙</button>
     <header>Justine Mae N. Celestial</header>
     <header>Junior Web Developer</header>
+    <label id="clicklabel">0</label>
+    <button id="clickcount">Click me!</button>
     <nav>
         <ul>
             <li><a href="#about-me">About Me</a></li>
@@ -18,6 +24,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     <main>
+        <button onclick="toggleAboutMe()">About Me</button>
         <section id="about-me">
             <h2>About Me</h2>
             <p>I am a passionate junior web developer with a keen interest in creating dynamic and user-friendly websites. I enjoy learning new technologies and improving my coding skills.</p>
@@ -48,6 +55,16 @@
             <h2>Contact</h2>
             <p>Email: justinecelestial2002@gmail.com | Phone: 0948-014-8122</p>
         </footer>
+        <section class="newsletter">
+        <h2>Subscribe to my newsletter</h2>
+        <form action="/submit_form" method="post" onsubmit="return validateForm()" novalidate>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="fname"><br>
+            <input type="submit" value="Submit">
+            <span id="email-error"></span>
+        </form>
+        </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

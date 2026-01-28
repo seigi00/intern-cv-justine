@@ -2,10 +2,28 @@
     box-sizing: border-box;
 }
 
+:root{
+    --base-color: #ffffff;
+    --accent-color: forestgreen;
+    --text-color: black; 
+    --secondary-text-color: #ffffff;
+    --primary-color: #ffb22d;
+}
+
+.darkmode{
+    --base-color: #1a1a1a;
+    --accent-color: #2d5a2d;
+    --text-color: #e0e0e0; 
+    --secondary-text-color: #ffffff;
+    --primary-color: #a87000;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif; /* or your preferred font */
     line-height: 1.6;
+    background-color: var(--base-color);
+    color: var(--text-color);
 }
 
 main {
@@ -14,19 +32,34 @@ main {
 }
 
 header {
-    background-color: #ffb22d;
+    background-color: var(--primary-color);
     padding: 20px;
-    border-bottom: 5px solid #333;
+    border-bottom: 5px solid var(--text-color);
 }
 
 section {
     padding: 24px;  
-    border-bottom: 20px solid #ffb22d;
-    border-color: #ffb22d;
-    background-color: #ffffff;
+    border-bottom: 20px solid var(--primary-color);
+    border-color: var(--primary-color);
+    background-color: var(--base-color);
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     margin: 16px 0;
+}
+
+label{
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+button{
+    background-color: var(--accent-color);
+    color: var(--secondary-text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 nav ul {
@@ -41,10 +74,49 @@ nav ul li {
 }
 
 a {
-    color: white;
-    background-color: forestgreen;
+    color: var(--secondary-text-color);
+    background-color: var(--accent-color);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 4px;
 }
 
+#theme-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    color: var(--secondary-text-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form input[type="email"] {
+    padding: 10px;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--secondary-text-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#email-error {
+    color: #ff4444;
+    display: block;
+    margin-top: 5px;
+}
